@@ -1,0 +1,48 @@
+﻿load(__DIR__ + "lib/jszip-101.js"); 
+load(__DIR__ + "lib/myexcel.js");
+load(__DIR__ + "lib/xlsx.full.min.js");
+
+// const exceljs = require("exceljs");
+
+console.log("> AACC Model Process Started");
+
+var imdbs = new Map();
+
+var app_components = $("element").filter( function(e) {
+    return e.type == 'application-component';
+}); 
+app_components.each(function(e) {
+//    console.log(e.type + ' -- ' + e.name);
+});
+
+var apps = $("element").filter( function(e) {
+    return e.type.toString().includes('application-');
+}); 
+apps.each(function(e) {
+    //console.log(e.type + ' -- ' + e.name);
+});
+
+var business = $("element").filter( function(e) {
+    return e.type.toString().includes('business-');
+}); 
+
+business.each(function(e) {
+    //console.log(e.type + ' -- ' + e.name);
+});
+
+$('archimate-diagram-model').each(function(v) {
+    console.setTextColor(255, 0, 0);
+    console.log('\n\n ' + v.type + ' -- ' + v.name + '\n\n');
+    console.setDefaultTextColor();
+    $(v).children().not("relationship").each(function(o) {
+        console.log(o.type + ' -- ' + o.name);     
+        if(o.name == 'DRAGON'){
+            $(o).prop('CIA', '211');
+            $(o).attr("fontColor", "#00FF00");
+            console.log( $(o).prop('Owner'));
+        }
+    });
+});
+
+console.log("> AACC Model Process Completed");
+
