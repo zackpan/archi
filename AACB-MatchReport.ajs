@@ -1,0 +1,116 @@
+var debug = true;
+console.show();
+console.clear();
+
+load(__DIR__ + "lib/papaparse.js");
+
+console.log("> Loaded Papa Parse");
+
+console.log("> Import AACB_CMDB.CSV");
+var filePath = 'e:\\Archi\\AACB_CMDB.csv'; // window.promptOpenFile({ title: "Open CSV", filterExtensions: ["*.CSV"], fileName: "default.archimate" });
+if (filePath) {
+    var FileReader = Java.type("java.io.FileReader");
+    var Types = Java.type("java.nio.charset.StandardCharsets");
+    var theCSVFile = new FileReader(filePath,Types.UTF_8);
+
+    var theCSV ="";
+    
+    var data = theCSVFile.read();
+    console.log("> Please Wait...");
+    while(data != -1) {
+        var theCharacter = String.fromCharCode(data);
+        theCSV+=theCharacter;
+        data = theCSVFile.read();
+    }
+    theCSVFile.close();
+
+    console.log("> File Loaded");
+    theDataFile = Papa.parse(theCSV);
+
+    theData = theDataFile.data;
+
+    theDataHeaders = theData[0];
+    for(var i = 0; i < theDataHeaders.length; i++) 
+    {
+        console.log(i + ' : ' + theDataHeaders[i]);
+    }
+    
+    console.log("Total Data Rows: ", theData.length);
+
+    var imdb_map = new Map();
+    var match_result = [];
+    var match_headers = ["Name", "Matched"];
+
+    var columns = ["Number", "Name", "OAR_ID","Confidentiality","Integrity","Availability","Service_Class","Operational_Status",
+        "RPO","RTO","Subcategory","Support_Group","Block_Owner","Approval_Group","Application_Owner", "Product_Owner", "Business_Owner",
+        "Application_Access_Fulfilment_Group", "Global-Regional", "Crown_Jewel", "Created", "Location", "Classification"];
+    for( var i = 1; i < theData.length; i++ ) {
+        var theConcept = null;
+        var theObject = [];
+        
+        // console.log(theData[i][1] + ',' + theData[i][2] + ',' + theData[i][10] + ',' + theData[i][18]);
+      
+        for (var j=0; j<columns.length; j++) {
+            theObject[columns[j]]=theData[i][j];
+        } 
+        imdb_map.set(theData[i][1], theObject);
+        // console.log(theObject);
+
+    }
+
+    imdb_map.forEach(function(value, key) {
+//	    console.log(key + " = " + value['OAR_ID']);
+    })
+
+    index = 0;
+    $('archimate-diagram-model').each(function(v) {
+        // if(v.name != 'US Critical Applications')
+        //    return;
+        console.setTextColor(255, 0, 0);
+        console.log('\n\n ' + v.type + ' -- ' + v.name + '\n\n');
+        console.setDefaultTextColor();
+        match_result[index++] = ['',''];
+        match_result[index++] = [v.name, 'View'];
+        match_result[index++] = ['',''];
+        $(v).children().not("relationship").each(function(o) {
+            if(o.type === 'application-component'){
+                if(imdb_map.get(o.name) != null )
+                {
+                    match_result[index] = [o.name, 'Yes'];
+                    console.log('Match Found: '+o.name);
+                }
+                else{
+                    match_result[index] = [o.name, 'No'];
+                    console.log('No Match Found: '+o.name);
+                }
+                index++;    
+                //$(o).prop('CIA', '211');
+                //$(o).attr("fontColor", "#00FF00");
+                //console.log( $(o).prop('Owner'));
+                //console.log(o.type + ' : ' + o.name); 
+                
+            }
+        });
+    });    
+    console.log("> Parsing Complete");
+    console.log(match_result);
+    // Open a dialog to let the user choose where to save the generated file
+    var defaultFileName = "MatchResult.csv"; // Default file name
+    var exportFile = window.promptSaveFile({ title: "Export to CSV", filterExtensions: [ "*.csv" ], fileName: defaultFileName } );
+    var theCSV = Papa.unparse({fields:match_headers, data:match_result});
+
+    if(exportFile != null) {
+            debug? console.log("> TheCSV"):true;
+            debug? console.log(theCSV):true;
+        
+            $.fs.writeFile(exportFile, theCSV);
+            console.log("> Export done");
+        }
+        else {
+            window.alert("File open canceled.");
+        }
+    console.log("End toCsv Script"); 
+}
+else {
+    console.log("> File Not Found");
+}
