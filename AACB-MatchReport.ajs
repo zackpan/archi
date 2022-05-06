@@ -1,4 +1,4 @@
-var debug = true;
+var debug = false;
 console.show();
 console.clear();
 
@@ -7,7 +7,7 @@ load(__DIR__ + "lib/papaparse.js");
 console.log("> Loaded Papa Parse");
 
 console.log("> Import AACB_CMDB.CSV");
-var filePath = 'e:\\Archi\\AACB_CMDB.csv'; // window.promptOpenFile({ title: "Open CSV", filterExtensions: ["*.CSV"], fileName: "default.archimate" });
+var filePath = '/home/zackpan/code/archi/AACB_CMDB.csv'; // 'e:\\Archi\\AACB_CMDB.csv'; // window.promptOpenFile({ title: "Open CSV", filterExtensions: ["*.CSV"], fileName: "default.archimate" });
 if (filePath) {
     var FileReader = Java.type("java.io.FileReader");
     var Types = Java.type("java.nio.charset.StandardCharsets");
@@ -43,7 +43,9 @@ if (filePath) {
 
     var columns = ["Number", "Name", "OAR_ID","Confidentiality","Integrity","Availability","Service_Class","Operational_Status",
         "RPO","RTO","Subcategory","Support_Group","Block_Owner","Approval_Group","Application_Owner", "Product_Owner", "Business_Owner",
-        "Application_Access_Fulfilment_Group", "Global-Regional", "Crown_Jewel", "Created", "Location", "Classification"];
+        "Application_Access_Fulfilment_Group", "Global-Regional", "Crown_Jewel", "Created", "Location", "Classification", "Matched", "Archi_Name"];
+    console.log("Column Size = "+columns.length);
+
     for( var i = 1; i < theData.length; i++ ) {
         var theConcept = null;
         var theObject = [];
@@ -58,11 +60,25 @@ if (filePath) {
 
     }
 
-    imdb_map.forEach(function(value, key) {
-//	    console.log(key + " = " + value['OAR_ID']);
-    })
-
     index = 0;
+    var app_components = $("element").filter( function(e) {
+        return e.type == 'application-component';
+    }); 
+    app_components.each(function(o) {
+        if(imdb_map.get(o.name) != null )
+        {
+            match_result[index] = [o.name, 'Yes'];
+            imdb_map.get(o.name)["Matched"] = 'Yes';
+            imdb_map.get(o.name)["Archi_Name"] = o.name;
+            console.log('Match Found: '+o.name);
+        }
+        else{
+            match_result[index] = [o.name, 'No'];
+            console.log('No Match Found: '+o.name);
+        }
+        index++;    
+    });
+    /*
     $('archimate-diagram-model').each(function(v) {
         // if(v.name != 'US Critical Applications')
         //    return;
@@ -77,11 +93,11 @@ if (filePath) {
                 if(imdb_map.get(o.name) != null )
                 {
                     match_result[index] = [o.name, 'Yes'];
-                    console.log('Match Found: '+o.name);
+                    //console.log('Match Found: '+o.name);
                 }
                 else{
                     match_result[index] = [o.name, 'No'];
-                    console.log('No Match Found: '+o.name);
+                    //console.log('No Match Found: '+o.name);
                 }
                 index++;    
                 //$(o).prop('CIA', '211');
@@ -91,24 +107,44 @@ if (filePath) {
                 
             }
         });
-    });    
+    });  
+    */  
     console.log("> Parsing Complete");
-    console.log(match_result);
+    // console.log(match_result);
+
+    var results = [];
+
+    imdb_map.forEach(function(row) {
+        var val = [];
+        
+        for (let x in row) {
+            val.push(row[x]);
+        }
+        
+ 
+            
+        // val.slice(0, -1);
+        results.push(val);
+    });
+    
+
     // Open a dialog to let the user choose where to save the generated file
     var defaultFileName = "MatchResult.csv"; // Default file name
-    var exportFile = window.promptSaveFile({ title: "Export to CSV", filterExtensions: [ "*.csv" ], fileName: defaultFileName } );
-    var theCSV = Papa.unparse({fields:match_headers, data:match_result});
-
-    if(exportFile != null) {
+    var matchFile = window.promptSaveFile({ title: "Export to CSV", filterExtensions: [ "*.csv" ], fileName: defaultFileName } );
+    var matchCSV = Papa.unparse({fields:match_headers, data:match_result});
+    if(matchFile != null) {
             debug? console.log("> TheCSV"):true;
             debug? console.log(theCSV):true;
-        
-            $.fs.writeFile(exportFile, theCSV);
-            console.log("> Export done");
-        }
-        else {
-            window.alert("File open canceled.");
-        }
+            $.fs.writeFile(matchFile, matchCSV);
+            console.log("> Match Export done");
+    }
+    else {
+        window.alert("File open canceled.");
+    }
+    var imdbCSV = Papa.unparse({fields:columns, data:results});
+    $.fs.writeFile(filePath, imdbCSV);
+ 
+    console.log("> IMDB Export done");
     console.log("End toCsv Script"); 
 }
 else {

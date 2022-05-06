@@ -1,941 +1,486 @@
 Name,Matched
-,
-GM 1a Microservice detailed creation and use,View
-,
-,
-GM 1b Test levels,View
-,
-,
-GM 2 Outer architecture patterns,View
-,
-,
-GM 3 Microservice platform layer,View
-,
-,
-GM 4 Microservice collaboration,View
-,
-Microservices user portal,No
-,
-GM 4a Microservice inner process functions,View
-,
-Microservice A,No
-,
-GM 1 Microservices creation and use,View
-,
-,
-GM 5 Microservice consumer driven testing,View
-,
-Microservice A,No
-Microservice B,No
-Microservice C,No
-,
-GM 6 Microservice functions and use sidecar,View
-,
-Microservice A,No
-,
-GM 7 Best practice for a Rest API Design,View
-,
-,
-GL 0 Architecture Principals overview,View
-,
-,
-GL 1 Business Architecture Principals,View
-,
-,
-GL 2 IT Architecture Principals,View
-,
-,
-GL 4 Security Architecture Principals,View
-,
-,
-GL 5 Mondrian leading requirements,View
-,
-,
-GL 3 Data Architecture Principals,View
-,
-,
-GL 6 Microservice Principles,View
-,
-,
-Agile principles,View
-,
-,
-GL 0 AAB Client centricity principles,View
-,
-,
-"GI 1Technology services overview (OIAm industry framework) ",View
-,
-,
-GI 2 Archimate Concept connecting architecture layer,View
-,
-,
-GI 3 BIAN metamodel,View
-,
-,
-GI 4 EA 2.0 metamodel,View
-,
-Application (Component),No
-(Microservice) application,No
-,
-GI 5 AACB Technical Reference Model (TRM),View
-,
-,
-GI 6 Cloud Native Interactive Landscape,View
-,
-,
-GI 7 Cynefin framework,View
-,
-,
-GT 1 ABB/SBB,View
-,
-,
-GT 2 Container type & ecosystem,View
-,
-,
-GT 3 Programming languages / languages purpose/ SBB,View
-,
-,
-GT 4 AWS Solutions,View
-,
-,
-GK 1Event streaming pattern,View
-,
-Microservice A,No
-Data Lake,No
-Data masters,No
-,
-GK2 Kafka active mirror,View
-,
-,
-GK3 Kafka topic & log,View
-,
-,
-GK4 Kafka cluster,View
-,
-,
-GK5 Kafka ecosystem,View
-,
-,
-Data for mining,View
-,
-(Microservice) application,No
-Process logging,No
-,
-CI/CD,View
-,
-(Microservice) application,No
-(Microservice) application,No
-,
-Architecture Characteristics,View
-,
-,
-Architecture styles,View
-,
-,
-Modularity,View
-,
-(Microservice) application,No
-,
-Eisenhower matrix for prioritisation,View
-,
-,
-Lean Portfolio management,View
-,
-,
-Code Development Review Pyramid,View
-,
-,
-Patterns,View
-,
-,
-Data Lake,View
-,
-Legacy System,No
-SaaS App,No
-Applications,No
-DataLoaders,No
-DATALAKE,No
-,
-A 1 Core clearing applications AP,View
-,
-MICS AP,No
-ION Margin Module,No
-Fix Brokers,No
-SB&L module APAC,No
-Sun Accounting System (Tky),Yes
+Documentation tool,No
+Legacy components,No
+"Saga -service XYZ ",No
+ACG,No
+AP Intercompany,No
+"Bancs ",No
+Bancs channels,No
+Data Hub,No
+Blue Cross Blue Shield,Yes
+Brazile,No
+Cancel & Fills,Yes
+Capital requirements,No
+CII,Yes
+CLIENT FEE TOOL,Yes
+Clearing Parameters (CLP),Yes
 COH AP,No
-RTRM AP,No
+COH US,No
+Dash,No
+Cross margin,No
+DRAGON,Yes
+Exact,No
+Extranet,No
+FCA Interest system,No
+Fix Brokers,No
+Fixed Gateway Server (FGS),No
+Gatekeeper,Yes
 GMB,No
-Exact,No
-CPR,Yes
-SGX  Equities initial margin calculator,No
-Agile Reporter (APAC),Yes
-"CSTA ",No
-TRR (Total Risk Requirements),No
-China payment tool,No
-"DTCC (SG) – regulatory reporting ",No
-"SGX Enhanced PCS reporting ",No
-"MICS Automation tool ",No
-"SGX exposure reporting ",No
-"FSA Volume reporting ",No
-Cash Management Tool,Yes
-TWOFOUR CM,Yes
-Mendix HK Warrant product generator,No
-ICF International Client Funding,No
-MICS NG EU,No
-MICS NG US,No
-Salesforce,Yes
-"HK Knock out warrant ",No
-"Bancs ",No
-NAM,Yes
-Swift,No
-GRIP Report Data Store,No
-Swift Allicance Access (SAA),No
-,
-A 2 Core clearing applications EU,View
-,
-MICS NG EU,No
-"Bancs ",No
-RTRM,No
-Exact,No
-SFCM,Yes
-SF Inventory Manager,No
-SIVEX,Yes
+GMI US,No
+GREAT PLAINS,Yes
+GRIP Archiver,Yes
 GRIP Client reporting,No
 GRIP Regulatory reporting,No
-TWOFOUR CM,Yes
+GRESHAM,Yes
+iDash,No
 Impala,No
-Clearing Parameters (CLP),Yes
-GRESHAM,Yes
-Salesforce,Yes
-CLIENT FEE TOOL,Yes
-TWOFOUR FX,Yes
-GRIP Archiver,Yes
 ION Margin Module,No
-Bancs DWH,No
-COH,No
-IHS Markit SF portal,No
-,
-A 3 Core clearing applications US,View
-,
-Dash,No
-MICS NG US,No
-DRAGON,Yes
+"Kafka ",No
+Len Boles OMO,No
+Len Boles RBH (LDB),No
+Len Boles RBM (LDB),No
+Len Boles TReg T (LDB),No
 Loanet,Yes
-GREAT PLAINS,Yes
-RTRM US,Yes
-COH US,No
-PC Span (US),Yes
-Blue Cross Blue Shield,Yes
-OASIS,Yes
-Cross margin,No
-Capital requirements,No
-Shark IV,Yes
-FCA Interest system,No
-ODS,Yes
-US SQL database,No
-GRIP Archiver,Yes
-ION Margin Module,No
-Global Client Master Component (GCM),No
-OMGEO,No
-RegSho,No
-Large Options Position Reporting (LOPR),No
-Client Statement Processor,No
-Client Data Processor,No
-R3 Allocation,No
-ShortInterest,No
-SEC15c3-3 Segregation,No
-DocuSign,Yes
-US Account data master,No
-APEX (RBH),No
-,
-AF1 AP view Application Function,View
-,
+Markit Serv / TradeSTP,No
+MCConnect,No
+MC Orders,Yes
+MC Trades,Yes
 MICS AP,No
-,
-AF2 EU view Application Function,View
-,
-,
-AF3 US view Application Function,View
-,
-,
-AS 3 US Application service view,View
-,
-APEX (RBH),No
-"Bancs ",No
-ACG,No
-CII,Yes
-DRAGON,Yes
-FIS Astec,No
-Short Stock Rate Calculator,Yes
-MICS NG US,No
-Dash,No
-Loanet,Yes
-ION Margin US,No
-Harris Bank Direct Business Line,Yes
-Mars (US),No
-ODS,Yes
-Salesforce,Yes
-US Account data master,No
-CLIENT FEE TOOL US,Yes
-Fidessa,No
-ITIVITI,No
-Trading Technologies,Yes
-COH US,No
-RTRM US,Yes
-Clearing Parameters (CLP),Yes
-GREAT PLAINS,Yes
-OASIS,Yes
-CLP Database,No
-Refinitive,No
-IDSI,No
-GRESHAM,Yes
-Large Options Position Reporting (LOPR),No
-SEC15c3-3 Segregation,No
-Cross margin,No
-PC Span (US),Yes
-Blue Cross Blue Shield,Yes
-FCA Interest system,No
-Swift,No
-,
-A 4 AAB applications and services in use,View
-,
-Everbridge,No
-,
-"Salesforce; Golden source for client & counterparty ",View
-,
-Salesforce,Yes
-GRIP Report Data Store,No
-CPR,Yes
-Mendix FAIR (Rentereseignering/crs/facta tool),No
-CLIENT FEE TOOL,Yes
-FRP (Finance and Risk Portal),No
-Sailpoint,No
-Global Client Master Component (GCM),No
-"Bancs ",No
-MICS NG EU,No
-Mendix NWM tool,No
-Exact,No
-Scansys,No
-Sumatra,Yes
-DocuSign,Yes
-Integration Component,No
-CII,Yes
-Panopticon - CTA,Yes
-,
-SFTR reporting,View
-,
-IHS Markit SFTR Reporting,No
-Pirum,Yes
-Pirum,Yes
-SFCM,Yes
-GRIP SFTR,No
+MICS AU,Yes
 MICS HK,Yes
-,
-AAB cooperation view (Fraai),View
-,
-GRIP Report Data Store,No
-Theon,Yes
-MICS,No
-GRIP Distributor,Yes
-Exact,No
-GREAT PLAINS,Yes
-Sun Accounting System (Tky),Yes
-"Bancs ",No
-Salesforce,Yes
-Clearing Parameters (CLP),Yes
-Grip Anacredit,No
-SFCM,Yes
-MCR tool,No
-Mendix NWM tool,No
-FRP (Finance and Risk Portal),No
-,
-Settlement & Custody service application landscape,View
-,
-Bancs channels,No
-CLIENT FEE TOOL,Yes
-COH,No
-Dataiku,Yes
-GAM Price Master,No
-GRIP Client reporting,No
-GRIP portal,No
-GTRS,Yes
-IDQ,No
-Inventory manager,No
-Loanet,Yes
-Mendix dividend database,No
-ISS (International Shareholder Services,No
-Mendix FAIR (Rentereseignering/crs/facta tool),No
-Mendix QI database,No
-Mendix NWM tool,No
-MICS,No
+MICS JP,Yes
+MICS NG EU,No
+MICS SG,Yes
+MICS NG US,No
+MICSAppend,No
+New Warrants,No
+OASIS,Yes
+PC Span (US),Yes
+Powerhist,No
+Quickfix,No
+RTLM,No
 RTRM,No
-Salesforce,Yes
+RTRM AP,No
+RTRM US,Yes
 Salesforce,Yes
 SB&L module APAC,No
 SFCM,Yes
+Sentry,Yes
+SF Inventory Manager,No
 Shark IV,Yes
+SIVEX,Yes
+SMARTS.BROKER,Yes
 Spark,Yes
+Sun Accounting System (Tky),Yes
 Swift,No
 Tableau,No
-Tax Voucher,No
-Tax Calc Engine,Yes
-TWOFOUR CM,Yes
-Warrants convertor,No
-Wizard portal,No
-OASIS,Yes
-Harris Bank Direct Business Line,Yes
-Extranet,No
-Network File Server (NFS),No
-Tableau EAM,No
-Securitease,No
-Securitease,No
-"Treasury dashboard ",No
-Cash Management Tool,Yes
-"SGX exposure reporting ",No
-"HK Knock out warrant ",No
-Mendix HK Warrant product generator,No
-BOS,Yes
-,
-FX Landscape,View
-,
-Markit Serv / TradeSTP,No
-AIL,No
-Swift,No
-FX matching engine (EMIR FX),No
-GRESHAM,Yes
-GRIP Report Data Store,No
-GRIP Reporter,Yes
-MICS NG EU,No
-MICS HK,Yes
-MICS AU,Yes
-MICS SG,Yes
-RTRM CE,Yes
-RTRM Sydney,Yes
-RTRM Singapore,Yes
-RTRM Hong Kong,Yes
-TWOFOUR FX,Yes
-Cobalt DL,Yes
-"APA Euronext ",No
-CII,Yes
-FX Risk Monitor,No
-Salesforce,Yes
-,
-Risk / RTRM,View
-,
-ACG,No
-MICS AP,No
-MICS NG EU,No
-MICS NG US,No
 TASC,Yes
+"TCC ",No
+TWOFOUR FX,Yes
+TWOFOUR CM,Yes
+UFG,Yes
+UFG (MEFF-MICS Gateway),No
+US Intercompany,No
+Connector,No
+Kafka cluster,No
+Kafka connect framework,No
+Worker,No
+Container Engine type,No
+Container Orchestration (Type),No
+Container Schedular,No
+Management Tooling (Type),No
+Packages,No
+BrokerRealTime,No
+MCOrder A,No
+MCOrder N,No
+MCTrade exchange A,No
+MCTrade exchange N,No
+TART,No
+"C4 Eye ",No
+SBL BTB,No
+Sinacore,No
+Data Lake,No
+Data masters,No
+Harris Bank Direct Business Line,Yes
+ODS,Yes
+US SQL database,No
+Global Allocation service (GAS),No
+AIL Bovesta Adapter,No
+Matera (AAB),No
+GAIN,Yes
+NAM,Yes
+Network File Server (NFS),No
+Report Generator RegisTR,No
+SEALS,Yes
+SPD,No
+SwapScale,Yes
+Traiana,Yes
+871m service,No
+CSDR penalty tool,No
+Grip Anacredit,No
+GRIP EMIR,No
+GRIP for CDSR,No
+GRIP MIFID II,No
+GRIP SFTR,No
+GTRS,Yes
+ISS (International Shareholder Services,No
+Mendix dividend database,No
+Mendix FR tax,No
+Mendix FTT France,No
+Mendix FTT Italy,No
+Mendix QI database,No
+Mendix FAIR (Rentereseignering/crs/facta tool),No
+Tableau EAM,No
+ACSF,Yes
+GRIP MIFID II CPR,No
+Reg Track,No
+Axiom,No
+BCBD,No
+Blue zone,No
+Dial,No
+EPR (Enterprise Party Reference),No
+Gids,No
+GRIP Distributor,Yes
+GRIP Report Data Store,No
+MICS,No
+SAP FC (Magnitute),No
+Theon,Yes
+WK Sas,No
+GRIP SRO,No
+Amperit,No
+Consuming Application AACB,No
+Enterprise/AAB Golden source,No
+Fidessa,No
+Golden source AACB,No
+Mendix NWM tool,No
 Refinitive,No
-MC Trades,Yes
-MCConnect,No
-MICSAppend,No
-Spark,Yes
-,
-Crown Jewels (Feb 2022),View
-,
-SEC15c3-3 Segregation,No
-Cancels & Fills (C&F),No
-"CSTA ",No
-GREAT PLAINS,Yes
-Loanet,Yes
-Large Options Position Reporting (LOPR),No
-OASIS,Yes
+Sailpoint,No
+Service component,No
+YouForce,No
+5555Diff,No
+Adobe  XI Pro,No
+Adobe Creative Cloud,No
+Adobe Illustrator CC,No
+Adobe InDesign CC,No
+Adobe Lifecycle Enterprse Suite 4,No
+AIL Broker URL,No
+AIL Injection tool,No
+Atlantis,Yes
+Bancs DWH,No
+BATS CHI-X,No
+BATS GUI (duplicate for BATS CHI-X),No
+BBH WorldView,Yes
+BBP / SECOM GUI,Yes
+BBP / SIS GUI,Yes
+AACB Client portal,No
+BCC Employee Portal,No
+BCC Interest Calculation System (BICS),No
+BCC Referentials,No
+Bloomberg Anywhere,Yes
+"BME, Spanish Exchange (Sabadell)",No
+BNP,No
+BNY Mellon (website),No
+Business Object Query Tool BCC,No
+C24 Integration Objects Studio,No
+CA Agenda,No
+CA Test tool,Yes
+Cascade Frankfurt,Yes
+CCI Screenflow,Yes
+CCP Recon Front End,No
+Clearnet eCCW,Yes
+Clearstream Xact,No
+Client Access Manager (CAM),No
+CLIENT Drop copy,No
+Client Identity Manager (EIM),No
+Client Real Time Feed (CRTF),No
+CME SSO,No
+Cobalt DL,Yes
+COH,No
+Connect: Direct,No
+CPR,Yes
+Custom Report Generator,No
+Deutsche Bank (website),No
+DGCX GUI (EOS GUI),No
+DWT Portal,No
+Dymo labelwriter software,No
+EBTS (Metals),No
+Ebts Metals (JP Morgan),No
+ECC GUI,No
+EDI,No
+EEX Exchange GUI,No
+EGUS,Yes
+Enigma - Archive tables,No
+Equiduct,No
+Equilend,Yes
+ERS Gateway,No
+ETF Securities,No
+ETI Tool Convertor,Yes
+Euclid PC,Yes
+Eurex,No
+Eurex CRE,Yes
+Eurex Gui,No
+Euroclear,No
+Euroclear Connect,No
+"Euronext ",No
+Euronext connect1,No
+Euronext RISK GUARD,No
+Exchange Connector,No
+Finance dashboard,No
+FOREX GUI Deutsche Boerse,No
+Form signer,No
+FX matching engine (EMIR FX),No
+GAM Price Master,No
+Gasi,No
+GRIP Authorisation,Yes
+GRIP Channels,No
+GRIP INTRADAY POSITION CALCULATOR (IPC),Yes
+GRIP portal,No
+GRIP Reporter,Yes
+Gui's,No
+IGTPlus Client SIC,No
+Inventory manager,No
+iShares (website),Yes
+ITRS BAM Clearing,No
+KDPW_CCP GUI,No
+KeePass Password Manager,Yes
+LCH SwapClear GUI,No
+LCH.Clearnet Secure Area,No
+Lyxor,No
+Macabacus,No
+MAGMA GUI,No
+Mendix MAIT,No
+MarkitWire GUI,Yes
+MCR tool,No
+Meld,No
+MEPHISTO,Yes
+Monte Titoli MT-X,Yes
+Monte Titoli X-TRM,Yes
+NASDAQ Commodities,No
+NASDAQ Q-Port,No
+Neolink BNP Paribas Securities Services,Yes
+Netting tool,No
+OMX_SECUR,No
 Panopticon - CTA,Yes
 Payplus,Yes
-Sentry,Yes
-Short Stock Rate Calculator,Yes
-Trade Guard,No
-Sinacore,No
-,
-FFM present target architecture vision,View
-,
-,
-BS 11 TCC connection state protocol,View
-,
-Street side,No
-Kafka cluster,No
-,
-R 2 Group clusters,View
-,
-,
-R 1 Cluster archimate components,View
-,
-,
-R3 Services,View
-,
-,
-R4 Business Service App linkages,View
-,
+PCS Eurex,Yes
+PDB,Yes
+Penalty tool,No
+Pentaho,Yes
+Pirum,Yes
+QuickFix Log viewer,No
+Risk Firedrill Tool,Yes
+"Risk Manager ",No
+SICS GUI (CCPA),Yes
+SnowFox FX,No
+SPM,Yes
+SQL Management Studio (Microsoft product),No
+Squirrel SQL,No
+START,Yes
+"Streamline Break Management Information ",No
+Supported Application Components,No
+SwapClear SMART,No
+T2S GUI,Yes
+TaSC GUI,No
+TaSC GUI (Warsaw),Yes
+Task Engine,No
+Tax Voucher,No
+TCS-Web,Yes
+"SIX ",No
+Themis,Yes
+Tradeweb GUI,Yes
+TriParty BNY,No
+UBS (website),No
+UiPath,No
+Vanguard (website),Yes
+vGenBrokersClientsUI,No
+Warrants convertor,No
+WebICE,No
+webMAX Six Security Services,No
+Wiener Borse Exchange GUI,No
+Wizard portal,No
+WMDaten FTP,No
+WSE (GUI),No
+Xpose AAC,No
+Helios,Yes
+OASIS ATIS like reporting,No
+Oasis GMI like reporting,No
+SG.xls,No
+Mars (US),No
+Effacts (US),Yes
+FINRA firm gateway,No
+Large Options Position Reporting (LOPR),No
+n-tier compliance solution,No
+NYSE EFP App,No
+Option Exercise e-commerce app,No
+Order Capture,No
+Projection Report.xlsx -Daily Liquidity Monitoring,No
+Tax Calc Engine,Yes
+AgileREPORTER (by Vermeg),No
+Allocations Complete Module,Yes
+MC Prices,Yes
+RegSho,No
+COH AU,No
+COH EU,No
+COH HK,No
+COH JP,No
+COH SG,No
+JBIS,No
+RTRM Sydney,Yes
+RTRM CE,Yes
+RTRM Hong Kong,Yes
+RTRM Japan,Yes
+RTRM Singapore,Yes
+TSE Equities initial marging  calculator,No
+SGX  Equities initial margin calculator,No
+Ariba,No
+Service delivery systems,No
+Scansys,No
+Sumatra,Yes
+IHS Markit SFTR Reporting,No
+Dataiku,Yes
+FRP (Finance and Risk Portal),No
+RDC,No
+Risk Monitor,No
+VB portal,No
+Global Client Master Component (GCM),No
+AGRC,No
+DocuSign,Yes
+IDQ,No
+SAP,No
+Cerberus,No
+Sharp,No
+Agile Reporter (APAC),Yes
+BOS,Yes
+Cash Management Tool,Yes
+China payment tool,No
+Client Data Processor,No
+Client Statement Processor,No
+Conga,No
+"CSTA ",No
+"DTCC (SG) – regulatory reporting ",No
+eCAT,Yes
+Excel,No
+"FSA Volume reporting ",No
+"HK Knock out warrant ",No
+ICE Block,No
+ICF International Client Funding,No
+Mendix HK Warrant product generator,No
+"MICS Automation tool ",No
+MICS EuroCCP,No
+Deal Station,No
+OMGEO,No
+R3 Allocation,No
+Securitease,No
+"SGX Enhanced PCS reporting ",No
+"SGX exposure reporting ",No
+ShortInterest,No
+"Treasury dashboard ",No
+TRR (Total Risk Requirements),No
+XL Connector,Yes
+IHS Markit IM calculation,No
+SEC15c3-3 Segregation,No
+BNY Mellon Portal (US),Yes
+TradeEcho,No
+"APA Euronext ",No
+APAC client fee tool,No
 ArchiTool,No
 BizzDesign,No
 ServiceNow,Yes
-TripSource,No
-Sharp,No
-Talent2Grow,No
-AACB Wiki,No
-Pulse,Yes
-MyLearning,No
-Everbridge,No
-,
-R5 map/connect business objects and business events,View
-,
-,
-D04 Financial Instrument types (asset classes),View
-,
-,
-D01 AACB Relation,View
-,
-,
-D02 Account,View
-,
-,
-D08 Fee types,View
-,
-,
-"D03 Position types & aspects ",View
-,
-,
-D06 Corporate action types,View
-,
-,
-D99 AAB (enterprise) data classification,View
-,
-,
-D10 LoGS (List of Golden Sources),View
-,
-,
-D07 Messages event types,View
-,
-,
-D05 Financial instrument Life cycle events,View
-,
-,
-D09 Time,View
-,
-,
-D03 Contextual position view,View
-,
-,
-D03 Position risks,View
-,
-,
-D03 Position valuation methodologies,View
-,
-,
-D03 Derivatives Position event types,View
-,
-,
-D11 Order execution strategies,View
-,
-,
-D00 Business Object Model,View
-,
-,
-D98 AAB standard for Information Assets (Standard number S07-624) & Information Risk Policy (101-23-24),View
-,
-Application,No
-,
-D97 Data/Information security,View
-,
-,
-D12 Client or Credit risk classification,View
-,
-,
-D04a Financial Instrument types and information sources,View
-,
-,
-S3 Legislation,View
-,
-,
-S1 AACB's strategy,View
-,
-,
-"S1 Enterprise Architectures value ",View
-,
-,
-S4 Stakeholder view,View
-,
-,
-S0 AACB Shareholder structure,View
-,
-,
-O1 Data usage coordinational roles,View
-,
-Golden source AACB,No
-Consuming Application AACB,No
-Enterprise/AAB Golden source,No
-Processing Application AACB,No
-,
-O2 How GRID blocks execute strategy,View
-,
-,
-O4 What GRID blocks do,View
-,
-,
-O3 GRID Organisation,View
-,
-,
-O5 Internal dependency & cooperation,View
-,
-,
-O6 AACB Risk Governance Set up,View
-,
-,
-O0 Business Domains,View
-,
-,
-O7 Technologies used per block,View
-,
-,
-2020 Jan- AP/EU cooperation baseline view JP custody,View
-,
-,
-3 With what services do we utilise our Capabilities,View
-,
-,
-5 How do our Services relate to our Business Domains,View
-,
-,
-4 The periodic system of AACB Services,View
-,
-,
-2  What is our Value Proposition (services),View
-,
-,
-6 What Processes do we use to operationalizes our services (Lego blocks level P0 & P1).,View
-,
-,
-1 What are we capable off,View
-,
-,
-"Fee type, Services & Products",View
-,
-,
-"Commercial view of our Value proposition (Product - Service break down). ",View
-,
-,
-BS 06 Position management & custody,View
-,
-,
-BS 04 Clearing,View
-,
-,
-BS 14 Messaging & reporting,View
-,
-,
-BS 03 Client Cash position management,View
-,
-,
-BS 05 (ETF) Creation redemption Process,View
-,
-Helios,Yes
-Mars (US),No
-,
-BS 05 Settlement,View
-,
-,
-BS 12 Money Transfer,View
-,
-,
-BS 22 Corporate Actions,View
-,
-,
-BS 27.4 Collateral Management,View
-,
-,
-BS 23 Reconcile,View
-,
-,
-BS 24 Regulatory Reporting,View
-,
-,
-BS 01 Global Execution Services (GES),View
-,
-,
-BS 20 Client risk management; Credit line monitoring,View
-,
-,
-BS 20 Client risk management,View
-,
-,
-BS 35 Market & reference data management,View
-,
-,
-BS 20 Client risk violation handling,View
-,
-,
-Clearing process detailed BA view,View
-,
-,
-Securities Clearing & Asset service view,View
-,
-,
-Securities clearing and settlement,View
-,
-,
-"Billing & invoicing (BS 31 Invoicing, BS 28 Partner invoices and BS 16 Client fee billing) ",View
-,
-Service delivery systems,No
-CLIENT FEE TOOL,Yes
-Exact,No
-Ariba,No
-Scansys,No
-Sumatra,Yes
-SAP,No
-,
-Money transfer service,View
-,
-,
-Icestar,View
-,
-Salesforce,Yes
-SFCM,Yes
-SEALS,Yes
-MICS NG EU,No
-TASC,Yes
-ION Margin Module,No
-"Bancs ",No
-Exact,No
-RTRM CE,Yes
-GRIP Archiver,Yes
-GRESHAM,Yes
-ICE Block,No
-Clearing Parameters (CLP),Yes
-GRIP Regulatory reporting,No
-GRIP Client reporting,No
-,
-Intial Margin for OTC derivatives,View
-,
-"Bancs ",No
-MICS NG EU,No
-MICS AP,No
-TWOFOUR FX,Yes
-SFCM,Yes
-RTRM CE,Yes
-IHS Markit IM calculation,No
-BNY Mellon Portal (US),Yes
-,
-US Fixed Income,View
-,
-,
-Instrument & Pricing,View
-,
-,
-Deposito Garantie Stelsel (DGS) Reporting,View
-,
-MICS NG EU,No
-Salesforce,Yes
-Panda Reporting,Yes
-Panopticon - CTA,Yes
-Data Hub,No
-Exact,No
-Tableau,No
-,
-BaaS Payment instruction & advice value chain flow,View
-,
-,
-27 Treasury,View
-,
-,
-28 Network management,View
-,
-,
-05-06 Settlement & Custody domain Service View,View
-,
-,
-GAS Technology stack (v0.1),View
-,
-,
-Gas tech stack,View
-,
-,
-1 GTC Domain clusters,View
-,
-,
-2 GTC Domain cluster functions,View
-,
-,
-9 GTC  Disaster recovery (BS 38),View
-,
-,
-3 GTC 1 External Professional sources,View
-,
-,
-4 GTC 2 Street Gateway / connectivity,View
-,
-,
-5 GTC 3 Data capture standardisation,View
-,
-,
-6 GTC 4 Clearing data enrichment,View
-,
-,
-7 GTC (internal) Distribution,View
-,
-,
-8 GTC  Data capture storage,View
-,
-,
-0 CCP view,View
-,
-,
-GES US Execution Services,View
-,
-Fidessa,No
-ITIVITI,No
-Trading Technologies,Yes
-Spark,Yes
-Matrix,No
-,
-GES APP Service view,View
-,
-Fidessa,No
-ITIVITI,No
-Trading Technologies,Yes
-Spark,Yes
-SMARTS.BROKER,Yes
-LiquidMetrics,No
-Cancels & Fills (C&F),No
-,
-GES Itivity landschape,View
-,
-ITIVITI,No
-UFG,Yes
-TASC,Yes
-SwapScale,Yes
-GRESHAM,Yes
-Salesforce,Yes
-SMARTS.BROKER,Yes
-GRIP MIFID II,No
-GRIP Archiver,Yes
-GRIP Regulatory reporting,No
-MICS NG EU,No
-Spark,Yes
-Impala,No
-GRIP Reporter,Yes
-Data Hub,No
-LiquidMetrics,No
-,
-GES Fractions architecture,View
-,
-Fidessa,No
-CII,Yes
-MICS NG EU,No
-Exact,No
-Theon,Yes
-MICS NG US,No
-ACG,No
-TASC,Yes
-,
-MICS NG service/functionality,View
-,
-,
-Services delivered by MICS,View
-,
-,
-"Active Boundaries Interaction ",View
-,
-,
-AACB Cyber Security Framework (CSF),View
-,
-,
-Nist Cyber Security Framework,View
-,
-,
-NIST Control deliverables,View
-,
-,
-Security framework  tooling plotted on CSF,View
-,
-,
-US Business Critical applications and data flows,View
-,
-FIS Astec,No
-Short Stock Rate Calculator,Yes
-MICS NG US,No
-IDSI,No
-Refinitive,No
-RTRM US,Yes
-COH US,No
-ACG,No
-CII,Yes
-CLIENT FEE TOOL US,Yes
-ION Margin US,No
-Salesforce,Yes
 US Account data master,No
-Mars (US),No
-DRAGON,Yes
-GREAT PLAINS,Yes
-Loanet,Yes
-Dash,No
-ODS,Yes
-OASIS,Yes
-Clearing Parameters (CLP),Yes
+CLIENT FEE TOOL US,Yes
 CLP Database,No
-GRESHAM,Yes
-Large Options Position Reporting (LOPR),No
-SEC15c3-3 Segregation,No
-Harris Bank Direct Business Line,Yes
-Fidessa,No
+FIS Astec,No
+ION Margin US,No
+LFA (Loannet Finance Allocation),No
+Short Stock Rate Calculator,Yes
+IDSI,No
 ITIVITI,No
+Matrix,No
 Trading Technologies,Yes
 APEX (RBH),No
-,
-US critical information systems (crown jewels) inscope audit request,View
-,
-SEC15c3-3 Segregation,No
-CII,Yes
-Clearing Parameters (CLP),Yes
-COH US,No
-CLP Database,No
-Dash,No
-DRAGON,Yes
-GREAT PLAINS,Yes
-GRESHAM,Yes
-ION Margin US,No
-Loanet,Yes
-Large Options Position Reporting (LOPR),No
-CLIENT FEE TOOL US,Yes
-MICS NG US,No
-OASIS,Yes
-ODS,Yes
-"Risk Manager ",No
-Salesforce,Yes
-ServiceNow,Yes
-Short Stock Rate Calculator,Yes
-Swift,No
-ACG,No
-RTRM US,Yes
-"Bancs ",No
-Global Client Master Component (GCM),No
-FIS Astec,No
-Shark IV,Yes
-,
-US Overview Critical datasets & appointed sources,View
-,
-Salesforce,Yes
-US Account data master,No
-CLIENT FEE TOOL US,Yes
-MICS NG US,No
-RTRM US,Yes
-,
-US TRM tools,View
-,
+APEX CPM,No
+APEX EPC,No
+APEX RB,No
+APEX Strato,No
+AACB Wiki,No
+Kaizen Reporting,Yes
+Pulse,Yes
+Talent2Grow,No
+TripSource,No
+LiquidMetrics,No
+IHS Markit SF portal,No
+Integration Component,No
+I-Comply,No
+WorldCheck,No
+Everbridge,No
+MyLearning,No
+AIL,No
+Swift Alliance Gateway (SAG),No
+Swift Allicance Access (SAA),No
+FX Risk Monitor,No
+Risk GUI Server,No
+Active Directory,Yes
+Cancels & Fills (C&F),No
+Trade Guard,No
+Panda Reporting,Yes
+ADP Workforce Now,Yes
+FINCEN portal,No
+FIX Broker,No
+SWIFT Crest,Yes
+SWIFT Lite,Yes
+"Taskize Connect ",No
+Component 1,No
+Component n,No
+Core system,No
+Event processor,No
+Module 1,No
+Module 2,No
+Module n,No
+Plug-in Component,No
+Processing unit 1,No
+Processing unit 2,No
+Processing unit n,No
+SB component cluster,No
+Service Component,No
+(Microservice) application,No
+Application,No
 Application (Component),No
-,
-ISAE type II 2021 EU,View
-,
-GRESHAM,Yes
-SEALS,Yes
-"Bancs ",No
-MICS NG EU,No
-CLIENT FEE TOOL,Yes
-GRIP Client reporting,No
-ServiceNow,Yes
-,
-03-03-2022 Generated View for Panopticon,View
-,
-Panopticon - CTA,Yes
+Application (type),No
+Approved SBB,No
+Street side,No
+Process logging,No
+Processing Application AACB,No
+Open source technology,No
+Microservice A,No
+Microservice B,No
+Microservice C,No
+Microservice N,No
+Microservices user portal,No
+Applications,No
+DATALAKE,No
+DataLoaders,No
+Legacy System,No
+SaaS App,No
+Fidessa FIX Execution Report Service,No
+Fidessa FIX Mapping Service,No
+Fidessa FIX NOS Service,No
+Fidessa Fraction FIX Gateway Service,No
+Fraction handling service,No
+Fraction OMS Service,No
+Fraction Order Execution Report Service,No
+Order Event Service,No
+Order Execution Report Service,No
+Order Execution Service,No
+Order Management Service,No
+Order Validation Service,No
+Positions EBalances Service,No
+Tenant FIX Gateway Servic,No
+Tenant FractionFIX Gateway Service,No
+Tenant Mapping FIX Execution Report Service,No
+Tenant MappingFIX NOS Services,No
+Tenant REST API Handler Services,No
+TradeEcho APA Mapping Service,No
+BRaaS Fractions UI,No
+Clearing Portal,No
+Fraction Book Risk Service,No
+Refinitiv Elektron Realtime Price Service,No
