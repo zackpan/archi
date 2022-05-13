@@ -7,7 +7,7 @@ load(__DIR__ + "lib/papaparse.js");
 console.log("> Loaded Papa Parse");
 
 console.log("> Import AACB_CMDB.CSV");
-var filePath = '/home/zackpan/code/archi/AACB_CMDB.csv'; // 'e:\\Archi\\AACB_CMDB.csv'; // window.promptOpenFile({ title: "Open CSV", filterExtensions: ["*.CSV"], fileName: "default.archimate" });
+var filePath = 'e:\\Archi\\AACB_CMDB.csv'; // '/home/zackpan/code/archi/AACB_CMDB.csv'; // window.promptOpenFile({ title: "Open CSV", filterExtensions: ["*.CSV"], fileName: "default.archimate" });
 if (filePath) {
     var FileReader = Java.type("java.io.FileReader");
     var Types = Java.type("java.nio.charset.StandardCharsets");
@@ -38,6 +38,7 @@ if (filePath) {
     console.log("Total Data Rows: ", theData.length);
 
     var imdb_map = new Map();
+
     var match_result = [];
     var match_headers = ["Name", "Matched"];
 
@@ -55,11 +56,17 @@ if (filePath) {
         for (var j=0; j<columns.length; j++) {
             theObject[columns[j]]=theData[i][j];
         } 
-        imdb_map.set(theData[i][1], theObject);
-        // console.log(theObject);
-
+        
+        if(theData[i][24] && theData[i][24] != '' && theData[i][23] != 'Yes') {
+            imdb_map.set(theData[i][24], theObject);
+            console.log('Name Translated:' + theData[i][1] + ' - ' + theData[i][24]);
+            //if(theData[i][24] == 'ACG')
+            //    console.log(imdb_map.get('ACG'));
+        }
+        else
+            imdb_map.set(theData[i][1], theObject);
     }
-
+    
     index = 0;
     var app_components = $("element").filter( function(e) {
         return e.type == 'application-component';
@@ -67,48 +74,88 @@ if (filePath) {
     app_components.each(function(o) {
         if(imdb_map.get(o.name) != null )
         {
-            match_result[index] = [o.name, 'Yes'];
-            imdb_map.get(o.name)["Matched"] = 'Yes';
-            imdb_map.get(o.name)["Archi_Name"] = o.name;
-            console.log('Match Found: '+o.name);
+            var object = imdb_map.get(o.name);
+            //if(o.name == 'ACG')
+            //     console.log(imdb_map.get('ACG'));
+            if(object["Archi_Name"] && object["Matched"] != 'Yes') // has translation 
+            {
+                object["Matched"] = 'Translate';
+                object["Archi_Name"] = o.name;
+                $(o).prop('imdb match', 'translate');            
+                match_result[index] = [object["Name"], 'Translate'];
+                console.log('Translate: ' + object["Name"] + ' - ' + o.name );
+            }
+            else
+            {
+                match_result[index] = [o.name, 'Yes'];
+                object["Matched"] = 'Yes';
+                object["Archi_Name"] = o.name;
+                $(o).prop('imdb match', 'yes');
+                //console.log('Match Found: '+o.name);
+            }
+
         }
-        else{
+        else
+        {
             match_result[index] = [o.name, 'No'];
-            console.log('No Match Found: '+o.name);
         }
         index++;    
     });
-    /*
+    
     $('archimate-diagram-model').each(function(v) {
-        // if(v.name != 'US Critical Applications')
-        //    return;
-        console.setTextColor(255, 0, 0);
-        console.log('\n\n ' + v.type + ' -- ' + v.name + '\n\n');
-        console.setDefaultTextColor();
-        match_result[index++] = ['',''];
-        match_result[index++] = [v.name, 'View'];
-        match_result[index++] = ['',''];
+        if(v.name == 'A 3 Core clearing applications US')
+        {
+			console.setTextColor(255, 0, 0);
+			console.log('\n\n ' + v.type + ' -- ' + v.name + '\n\n');
+			$(v).children().each(function(o) {
+				console.log(o.name + ' - ' + o.type );
+			});
+			console.setDefaultTextColor();
+		}
         $(v).children().not("relationship").each(function(o) {
-            if(o.type === 'application-component'){
-                if(imdb_map.get(o.name) != null )
-                {
-                    match_result[index] = [o.name, 'Yes'];
-                    //console.log('Match Found: '+o.name);
-                }
-                else{
-                    match_result[index] = [o.name, 'No'];
-                    //console.log('No Match Found: '+o.name);
-                }
-                index++;    
-                //$(o).prop('CIA', '211');
-                //$(o).attr("fontColor", "#00FF00");
-                //console.log( $(o).prop('Owner'));
-                //console.log(o.type + ' : ' + o.name); 
-                
+			if(o.name == 'ACG' )
+				console.log('ACG in view ' + v.name + ' - ' + o.type );
+            if(o.type === 'application-component' ){
+                 //$(o).prop('CIA', '211');
+
+				if( $(o).prop('imdb match') === 'yes' )
+				{
+					$(o).attr("fontColor", "#FF0000");
+					//console.log( $(o).prop('Owner'));
+					//console.log(o.type + ' : ' + o.name); 
+				}				
+				else if( $(o).prop('imdb match') === 'translate' ) {
+					$(o).attr("fontColor", "#00FF00");
+				}
+
+				$(o).children().filter("application-component").each(function(c) {
+					if( $(c).prop('imdb match') === 'yes' )
+					{
+						$(c).attr("fontColor", "#F00000");
+						//console.log( $(c).prop('Owner'));
+						//console.log(c.type + ' : ' + c.name); 
+					}				
+					else if( $(c).prop('imdb match') === 'translate' ) {
+						$(c).attr("fontColor", "#00F000");
+					}				
+				});                
             }
+			if(o.type === 'grouping') {
+				$(o).children().filter("application-component").each(function(c) {
+					if( $(c).prop('imdb match') === 'yes' )
+					{
+						$(c).attr("fontColor", "#F00000");
+						//console.log( $(c).prop('Owner'));
+						//console.log(c.type + ' : ' + c.name); 
+					}				
+					else if( $(c).prop('imdb match') === 'translate' ) {
+						$(c).attr("fontColor", "#00F000");
+					}				
+				});
+			}
         });
     });  
-    */  
+      
     console.log("> Parsing Complete");
     // console.log(match_result);
 
@@ -120,9 +167,6 @@ if (filePath) {
         for (let x in row) {
             val.push(row[x]);
         }
-        
- 
-            
         // val.slice(0, -1);
         results.push(val);
     });
@@ -142,8 +186,10 @@ if (filePath) {
         window.alert("File open canceled.");
     }
     var imdbCSV = Papa.unparse({fields:columns, data:results});
+    // var filePathNew = 'e:\\Archi\\AACB_CMDB_UPDATE.csv';
     $.fs.writeFile(filePath, imdbCSV);
  
+    
     console.log("> IMDB Export done");
     console.log("End toCsv Script"); 
 }

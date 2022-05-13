@@ -2,9 +2,9 @@ Name,Matched
 Documentation tool,No
 Legacy components,No
 "Saga -service XYZ ",No
-ACG,No
+TRADE CAPTURE-US,Translate
 AP Intercompany,No
-"Bancs ",No
+BANCS,Yes
 Bancs channels,No
 Data Hub,No
 Blue Cross Blue Shield,Yes
@@ -36,9 +36,9 @@ iDash,No
 Impala,No
 ION Margin Module,No
 "Kafka ",No
-Len Boles OMO,No
-Len Boles RBH (LDB),No
-Len Boles RBM (LDB),No
+OMO,Translate
+RBH,Translate
+RBM,Translate
 Len Boles TReg T (LDB),No
 Loanet,Yes
 Markit Serv / TradeSTP,No
@@ -49,9 +49,9 @@ MICS AP,No
 MICS AU,Yes
 MICS HK,Yes
 MICS JP,Yes
-MICS NG EU,No
+MICS CE,Yes
 MICS SG,Yes
-MICS NG US,No
+MICS US,Yes
 MICSAppend,No
 New Warrants,No
 OASIS,Yes
@@ -129,7 +129,7 @@ Mendix FR tax,No
 Mendix FTT France,No
 Mendix FTT Italy,No
 Mendix QI database,No
-Mendix FAIR (Rentereseignering/crs/facta tool),No
+FAIR,Yes
 Tableau EAM,No
 ACSF,Yes
 GRIP MIFID II CPR,No
@@ -141,7 +141,7 @@ Dial,No
 EPR (Enterprise Party Reference),No
 Gids,No
 GRIP Distributor,Yes
-GRIP Report Data Store,No
+GRIP RDS,Yes
 MICS,No
 SAP FC (Magnitute),No
 Theon,Yes
@@ -152,7 +152,7 @@ Consuming Application AACB,No
 Enterprise/AAB Golden source,No
 Fidessa,No
 Golden source AACB,No
-Mendix NWM tool,No
+NWM,Yes
 Refinitive,No
 Sailpoint,No
 Service component,No
@@ -305,10 +305,10 @@ Helios,Yes
 OASIS ATIS like reporting,No
 Oasis GMI like reporting,No
 SG.xls,No
-Mars (US),No
+MARS (US),Yes
 Effacts (US),Yes
 FINRA firm gateway,No
-Large Options Position Reporting (LOPR),No
+LOPR  (US),Translate
 n-tier compliance solution,No
 NYSE EFP App,No
 Option Exercise e-commerce app,No
@@ -334,7 +334,7 @@ TSE Equities initial marging  calculator,No
 SGX  Equities initial margin calculator,No
 Ariba,No
 Service delivery systems,No
-Scansys,No
+Imagecapture - ScanSys,Yes
 Sumatra,Yes
 IHS Markit SFTR Reporting,No
 Dataiku,Yes
@@ -369,7 +369,7 @@ Mendix HK Warrant product generator,No
 MICS EuroCCP,No
 Deal Station,No
 OMGEO,No
-R3 Allocation,No
+15c3-3 Allocation,Translate
 Securitease,No
 "SGX Enhanced PCS reporting ",No
 "SGX exposure reporting ",No
@@ -378,7 +378,7 @@ ShortInterest,No
 TRR (Total Risk Requirements),No
 XL Connector,Yes
 IHS Markit IM calculation,No
-SEC15c3-3 Segregation,No
+15c3-3 Segregation,Translate
 BNY Mellon Portal (US),Yes
 TradeEcho,No
 "APA Euronext ",No
@@ -397,7 +397,7 @@ IDSI,No
 ITIVITI,No
 Matrix,No
 Trading Technologies,Yes
-APEX (RBH),No
+Apex,Translate
 APEX CPM,No
 APEX EPC,No
 APEX RB,No
@@ -451,10 +451,10 @@ Street side,No
 Process logging,No
 Processing Application AACB,No
 Open source technology,No
-Microservice A,No
-Microservice B,No
-Microservice C,No
-Microservice N,No
+(Micro)service A,No
+(Micro)service B,No
+(Micro)service C,No
+(Micro)service N,No
 Microservices user portal,No
 Applications,No
 DATALAKE,No
