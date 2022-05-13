@@ -141,8 +141,11 @@ dec 2019. Marcel Verdonk is implementing functionality to automatically request 
       <property key="Golden source" value="Client data"/>
       <property key="Type" value="Package"/>
       <property key="Golden source" value="Counterparty data"/>
+      <property key="imdb match" value="yes"/>
     </element>
-    <element xsi:type="archimate:ApplicationComponent" name="Harris Bank Direct Business Line" id="id-4542425f016748d18682191da6e2d62d"/>
+    <element xsi:type="archimate:ApplicationComponent" name="Harris Bank Direct Business Line" id="id-4542425f016748d18682191da6e2d62d">
+      <property key="imdb match" value="yes"/>
+    </element>
     <element xsi:type="archimate:ApplicationComponent" name="Swift" id="id-958f90d3397644a393018e35488bcdab">
       <documentation>https://www.swift.com/myswift/customer-security-programme-csp&#xD;
 &#xD;
@@ -184,23 +187,28 @@ Application for securities,  cash and derivatives processing.</documentation>
       <property key="Owner" value="US"/>
       <property key="Type" value="Own build"/>
       <property key="CIA" value="211"/>
+      <property key="imdb match" value="yes"/>
     </element>
     <element xsi:type="archimate:ApplicationComponent" name="Loanet" id="id-e10c9cfc65a74dd9a3cc01035ebdb398">
       <documentation>US B&amp;L system. System used for books and records of borrowed and loaned contracts.</documentation>
       <property key="Owner" value="US"/>
+      <property key="imdb match" value="yes"/>
     </element>
     <element xsi:type="archimate:ApplicationComponent" name="GREAT PLAINS" id="id-1e03ebf22d60403fb50743d3c87bd025">
       <documentation>US General Ledger system</documentation>
       <property key="Owner" value="B10 Finance &amp; control Block"/>
+      <property key="imdb match" value="yes"/>
     </element>
     <element xsi:type="archimate:ApplicationComponent" name="RTRM US" id="id-610dd91d4e064845a2f0c1f235da69df">
       <property key="Owner" value="B07-8 Market Risk block"/>
+      <property key="imdb match" value="yes"/>
     </element>
     <element xsi:type="archimate:ApplicationComponent" name="COH US" id="id-eed3363ecc1f450ba64ffbc76d39c2a3">
       <property key="Owner" value="B07-8 Market Risk block"/>
     </element>
     <element xsi:type="archimate:ApplicationComponent" name="PC Span (US)" id="id-4cec19c7234a4914bb0d98cebf11ef85">
       <property key="Owner" value="US"/>
+      <property key="imdb match" value="yes"/>
     </element>
     <element xsi:type="archimate:ApplicationComponent" name="Blue Cross Blue Shield" id="id-0e61f21aadc846deb85297fc92162c2c">
       <documentation>An electronic blue sheet is an electronic request for detailed information about trades sent to clearing firms, broker dealers and market makers by the Securities and Exchange Commission (SEC). Electronic blue sheets include the name of the security, its price, the date of the transaction, the size of the transaction and the parties involved. This information request was historically mailed to clearing firms on blue forms. As the daily volume of securities increased, this process has moved to an electronic system in order to facilitate collection.&#xD;
@@ -215,11 +223,13 @@ Firms can face fines if it is discovered that they supplied regulators with insu
 The error occurred with software Citigroup used when it processed requests for its blue sheet data. This led to the omission of 26,810 transactions when Citigroup responded to blue sheet requests between 1999 and 2014.</documentation>
       <property key="Owner" value="US"/>
       <property key="OAR ID" value="AAC.SYS.01291"/>
+      <property key="imdb match" value="yes"/>
     </element>
     <element xsi:type="archimate:ApplicationComponent" name="OASIS" id="id-cc61d4de9b7c406080ec337b60de4d6a">
       <documentation>System used to store and save client data.&#xD;
 Also: End User Application to see account statements</documentation>
       <property key="Owner" value="US"/>
+      <property key="imdb match" value="yes"/>
     </element>
     <element xsi:type="archimate:ApplicationComponent" name="Cross margin" id="id-70f5c4a349354feba3f28dd252d8bf5d">
       <property key="Owner" value="US"/>
@@ -234,6 +244,7 @@ Requirement of ESMA&#xD;
 &#xD;
 US uses Shark III. </documentation>
       <property key="Owner" value="B12 SBL &amp; Treasury block"/>
+      <property key="imdb match" value="yes"/>
     </element>
     <element xsi:type="archimate:ApplicationComponent" name="FCA Interest system" id="id-ab4d8100b80e490692813e5435a6b7eb">
       <property key="Owner" value="US"/>
@@ -243,6 +254,7 @@ US uses Shark III. </documentation>
 ODS connects to Bancs in EU via MQ receiving settlement instructions in (SWIFT). It then interact with counter party via DTCC system (SWIFT/MQ). End of day, ODS send settled and new trades to MICS.&#xD;
 Real time feed from ODS to MICS was explored but abandoned  due to complication on the MICS side.&#xD;
 </documentation>
+      <property key="imdb match" value="yes"/>
     </element>
     <element xsi:type="archimate:ApplicationComponent" name="US SQL database" id="id-2331b997f33d4d5686383c01522d1b50">
       <documentation>Many functionalities delivered:&#xD;
@@ -254,6 +266,7 @@ Real time feed from ODS to MICS was explored but abandoned  due to complication 
       <documentation>Actually marked as 3 applications on the OAR list. Generic, for clients and for employees.&#xD;
 </documentation>
       <property key="Owner" value="B3 Client reporting block"/>
+      <property key="imdb match" value="yes"/>
     </element>
     <element xsi:type="archimate:ApplicationComponent" name="ION Margin Module" id="id-acac10108b06443491d8ef38414df428">
       <documentation>ION Margin calculates the margin requirements AACB holds at CCP's on a CCP, Client and all lower levels, according to CCP program&#xD;
@@ -307,6 +320,7 @@ R3 is a finance regulatory requirement that does not have connections to other s
 Two occurences; in EU Docusign of AAB is used whereas in US a local AACB version will be installed. (split app in two separate apps??)&#xD;
 Docusign used for signing of contracts: presently used for vendor contract signing. Positioned for client contract signing as well, client contracts stored in Salesforce, no archiving in Docusign (aacb)</documentation>
       <property key="Owner" value="AAB"/>
+      <property key="imdb match" value="yes"/>
     </element>
     <element xsi:type="archimate:ApplicationComponent" name="US Account data master" id="id-f5af49812de741f18aec8a02a21765ca"/>
     <element xsi:type="archimate:ApplicationComponent" name="APEX (RBH)" id="id-b28884283d4b44d1aff8af06d2b52918">
@@ -344,12 +358,14 @@ If Futures/ Future Options: ACG will receive a file from the CCP</documentation>
       <property key="Owner" value="B2 Client instructing block"/>
       <property key="OAR ID" value="AAC.SYS.01027"/>
       <property key="CIA" value="211"/>
+      <property key="imdb match" value="yes"/>
     </element>
     <element xsi:type="archimate:ApplicationComponent" name="DRAGON" id="id-ba7c12bf15cc4ebf949bc3c3081d5ce1">
       <documentation>Inhouse-built sytem: Initially built for external/internal reporting purposes with ad-hoc report genarating functionality (automated interactive systematic process). Meanwhile, Dragon has become a crucial system to support critical business process in all departments (finance, risk, equity operations, corporate actions, compliance, commercial,...)</documentation>
       <property key="Owner" value="US"/>
       <property key="Type" value="Own build"/>
       <property key="CIA" value="211"/>
+      <property key="imdb match" value="yes"/>
     </element>
     <element xsi:type="archimate:ApplicationComponent" name="FIS Astec" id="id-2e93c051d60245aabffd4950e1c40b1a">
       <documentation>Delivers Reference borrow rates to Short Stock rate Calculator. &#xD;
@@ -357,7 +373,9 @@ Delivers 550/551 report to Broadridge  SHARP4? &#xD;
 </documentation>
       <property key="Region" value="US"/>
     </element>
-    <element xsi:type="archimate:ApplicationComponent" name="Short Stock Rate Calculator" id="id-4162049b19f74b1da90c4d8b3155dfef"/>
+    <element xsi:type="archimate:ApplicationComponent" name="Short Stock Rate Calculator" id="id-4162049b19f74b1da90c4d8b3155dfef">
+      <property key="imdb match" value="yes"/>
+    </element>
     <element xsi:type="archimate:ApplicationComponent" name="MICS NG US" id="id-451b7baed46d42c782062a9e6fbb86b3">
       <property key="Owner" value="B15 Cleared Derivatives block"/>
       <property key="Type" value="Own Build"/>
@@ -371,9 +389,12 @@ Delivers 550/551 report to Broadridge  SHARP4? &#xD;
     <element xsi:type="archimate:ApplicationComponent" name="Loanet" id="id-79cf03f0d8dd4fe7998d5a2681ae4954">
       <documentation>US B&amp;L system. System used for books and records of borrowed and loaned contracts.</documentation>
       <property key="Owner" value="US"/>
+      <property key="imdb match" value="yes"/>
     </element>
     <element xsi:type="archimate:ApplicationComponent" name="ION Margin US" id="id-79cb23e9b2f64e3f8c43a7a61f1843a3"/>
-    <element xsi:type="archimate:ApplicationComponent" name="Harris Bank Direct Business Line" id="id-292be75ae1184f0aadff52ced3ef15d0"/>
+    <element xsi:type="archimate:ApplicationComponent" name="Harris Bank Direct Business Line" id="id-292be75ae1184f0aadff52ced3ef15d0">
+      <property key="imdb match" value="yes"/>
+    </element>
     <element xsi:type="archimate:ApplicationComponent" name="Mars (US)" id="id-715bb90a5a6046369dbe45204017ba1c">
       <documentation>Platform used for ETF creation redemption</documentation>
       <property key="Region" value="US"/>
@@ -384,6 +405,7 @@ Delivers 550/551 report to Broadridge  SHARP4? &#xD;
 ODS connects to Bancs in EU via MQ receiving settlement instructions in (SWIFT). It then interact with counter party via DTCC system (SWIFT/MQ). End of day, ODS send settled and new trades to MICS.&#xD;
 Real time feed from ODS to MICS was explored but abandoned  due to complication on the MICS side.&#xD;
 </documentation>
+      <property key="imdb match" value="yes"/>
     </element>
     <element xsi:type="archimate:ApplicationComponent" name="Salesforce" id="id-43410da527204cd3b890aeefe6e1692b">
       <documentation>CRM tool. Golden source for Client data.&#xD;
@@ -393,9 +415,12 @@ dec 2019. Marcel Verdonk is implementing functionality to automatically request 
       <property key="Golden source" value="Client data"/>
       <property key="Type" value="Package"/>
       <property key="Golden source" value="Counterparty data"/>
+      <property key="imdb match" value="yes"/>
     </element>
     <element xsi:type="archimate:ApplicationComponent" name="US Account data master" id="id-1ffc3238f01246919b1e3456ea3a9ca5"/>
-    <element xsi:type="archimate:ApplicationComponent" name="CLIENT FEE TOOL US" id="id-76da333ba62842a0a04b55aba92860bd"/>
+    <element xsi:type="archimate:ApplicationComponent" name="CLIENT FEE TOOL US" id="id-76da333ba62842a0a04b55aba92860bd">
+      <property key="imdb match" value="yes"/>
+    </element>
     <element xsi:type="archimate:ApplicationComponent" name="Fidessa" id="id-a1ace8ddb3644b9da2749d6db4214630">
       <documentation>Asset classes supported: Equities and Derivatives</documentation>
     </element>
@@ -415,27 +440,32 @@ Asset classes supported: Equities and Derivatives - Going live Q4 2021</document
     </element>
     <element xsi:type="archimate:ApplicationComponent" name="Trading Technologies" id="id-3e1c6e66c41d4f20b4a26bc44f1d333c">
       <documentation>Asset classes supported: Derivatives</documentation>
+      <property key="imdb match" value="yes"/>
     </element>
     <element xsi:type="archimate:ApplicationComponent" name="COH US" id="id-579713400a2d4e5e803b1c6982ad1744">
       <property key="Owner" value="B07-8 Market Risk block"/>
     </element>
     <element xsi:type="archimate:ApplicationComponent" name="RTRM US" id="id-dba4f04f33864633bdca930742b591d5">
       <property key="Owner" value="B07-8 Market Risk block"/>
+      <property key="imdb match" value="yes"/>
     </element>
     <element xsi:type="archimate:ApplicationComponent" name="Clearing Parameters (CLP)" id="id-1e5c49bbb2e7487f80f435977f827cfd">
       <documentation>Clearing Parameters (CLP) is a global reporting tool that shows the risk reports for all clients (all clients are shown in one line per client). CLP receives static and dynamic variables from MICS. In the tool parameters are defined. These parameters can be edited by Risk Management. If the values received from MICS, GMI or ATIS are too low or high, an alert will be shown in the report.</documentation>
       <property key="Owner" value="B7-8 Market Risk block"/>
       <property key="CIA" value="211"/>
       <property key="OAR ID" value="FNL.SYS.10793"/>
+      <property key="imdb match" value="yes"/>
     </element>
     <element xsi:type="archimate:ApplicationComponent" name="GREAT PLAINS" id="id-d3361fcdf86b4100824241880994f4be">
       <documentation>US General Ledger system</documentation>
       <property key="Owner" value="B10 Finance &amp; control Block"/>
+      <property key="imdb match" value="yes"/>
     </element>
     <element xsi:type="archimate:ApplicationComponent" name="OASIS" id="id-a28de2b2525e4151a687bdb80f856d0b">
       <documentation>System used to store and save client data.&#xD;
 Also: End User Application to see account statements</documentation>
       <property key="Owner" value="US"/>
+      <property key="imdb match" value="yes"/>
     </element>
     <element xsi:type="archimate:ApplicationComponent" name="CLP Database" id="id-44fa09a5cd82443dad19a21cd546001d">
       <documentation>CLP is an overnight reporting system with comments and variance analyses of Risk department.</documentation>
@@ -455,6 +485,7 @@ We connect to Refinative via a Refinative client. </documentation>
     <element xsi:type="archimate:ApplicationComponent" name="GRESHAM" id="id-3ac76b88d915431ba19167a100e6bb9a">
       <documentation>(GTC)</documentation>
       <property key="Owner" value="B10 Finance &amp; control Block"/>
+      <property key="imdb match" value="yes"/>
     </element>
     <element xsi:type="archimate:ApplicationComponent" name="Large Options Position Reporting (LOPR)" id="id-dc56627f2bce43beb0a9197398e5973d">
       <property key="Region" value="US"/>
@@ -471,6 +502,7 @@ We connect to Refinative via a Refinative client. </documentation>
     </element>
     <element xsi:type="archimate:ApplicationComponent" name="PC Span (US)" id="id-0c372c899de240af9ebf0a9d60bc2283">
       <property key="Owner" value="US"/>
+      <property key="imdb match" value="yes"/>
     </element>
     <element xsi:type="archimate:ApplicationComponent" name="Blue Cross Blue Shield" id="id-e2cf5008c11945c09f4717139c0e7dbd">
       <documentation>An electronic blue sheet is an electronic request for detailed information about trades sent to clearing firms, broker dealers and market makers by the Securities and Exchange Commission (SEC). Electronic blue sheets include the name of the security, its price, the date of the transaction, the size of the transaction and the parties involved. This information request was historically mailed to clearing firms on blue forms. As the daily volume of securities increased, this process has moved to an electronic system in order to facilitate collection.&#xD;
@@ -485,6 +517,7 @@ Firms can face fines if it is discovered that they supplied regulators with insu
 The error occurred with software Citigroup used when it processed requests for its blue sheet data. This led to the omission of 26,810 transactions when Citigroup responded to blue sheet requests between 1999 and 2014.</documentation>
       <property key="Owner" value="US"/>
       <property key="OAR ID" value="AAC.SYS.01291"/>
+      <property key="imdb match" value="yes"/>
     </element>
     <element xsi:type="archimate:ApplicationComponent" name="FCA Interest system" id="id-76938c377a9d41b78adedc9c84dab581">
       <property key="Owner" value="US"/>
@@ -983,7 +1016,7 @@ Len Boles is part of Dash</content>
           <bendpoint startX="-545" startY="-43" endX="63" endY="219"/>
         </sourceConnection>
       </child>
-      <child xsi:type="archimate:DiagramObject" id="id-16464f5a4c4e4c90ac9a65c01edf05d7" targetConnections="id-227c211bbe8c4284a8f40a660a97e76e id-38110352784e40e296ce760903dcec86 id-4ae0bdd922a74f048aee4f1ea24e8e78 id-8a41213508d246588811d0b7a8d20295 id-8d27efba3c814febbd8f553a65849888 id-1a383153c48c4e5fb4d76619c1aea2ef" fontColor="#000000" archimateElement="id-04f62e628f644d7abd1675138759e912">
+      <child xsi:type="archimate:DiagramObject" id="id-16464f5a4c4e4c90ac9a65c01edf05d7" targetConnections="id-227c211bbe8c4284a8f40a660a97e76e id-38110352784e40e296ce760903dcec86 id-4ae0bdd922a74f048aee4f1ea24e8e78 id-8a41213508d246588811d0b7a8d20295 id-8d27efba3c814febbd8f553a65849888 id-1a383153c48c4e5fb4d76619c1aea2ef" fontColor="#00FF00" archimateElement="id-04f62e628f644d7abd1675138759e912">
         <bounds x="530" y="633" width="198" height="55"/>
         <sourceConnection xsi:type="archimate:Connection" id="id-85b903da39794ba681866d923c2546e2" source="id-16464f5a4c4e4c90ac9a65c01edf05d7" target="id-c903d737b05c46c09d2f239d27f7e374" archimateRelationship="id-a48d796b2e114f179c8b36d08159a957"/>
         <sourceConnection xsi:type="archimate:Connection" id="id-5d02b04c5c384ef38b97aa3a7ef86318" source="id-16464f5a4c4e4c90ac9a65c01edf05d7" target="id-14d3259e06954fc689558aeacd7cafb3" archimateRelationship="id-dbea169a3ae34975975147170083feca">
@@ -1206,7 +1239,7 @@ If it used by R3 than manual??&#xD;
         <sourceConnection xsi:type="archimate:Connection" id="id-602d0e08612242578d58f38f39d1a8ec" source="id-58cd297b5bb14f20bc89934235eed0b2" target="id-cc3623f95ad24e3f91142fae6a70a6b3" archimateRelationship="id-9a65511e06654af6998c98853223ad9d"/>
         <sourceConnection xsi:type="archimate:Connection" id="id-2e64879000a94e5bbe91f22a92feaed2" source="id-58cd297b5bb14f20bc89934235eed0b2" target="id-aa105994a892444e8b5a218f4dee5de4" archimateRelationship="id-9431b9ed4a3740d3be15b4c96c50c03d"/>
       </child>
-      <child xsi:type="archimate:DiagramObject" id="id-ba039d5524664fed82a991dbcc2c5402" targetConnections="id-dd877d3ee06a4fc89b440f9d626c3eac id-9666a2f68ec94689a840626e1e1f9b86 id-14896fd2b35a459790ec9b9f8be7cfc8 id-95874ef3c8a54080a7aeb4ea9aec8e09" fontColor="#000000" archimateElement="id-ba7c12bf15cc4ebf949bc3c3081d5ce1">
+      <child xsi:type="archimate:DiagramObject" id="id-ba039d5524664fed82a991dbcc2c5402" targetConnections="id-dd877d3ee06a4fc89b440f9d626c3eac id-9666a2f68ec94689a840626e1e1f9b86 id-14896fd2b35a459790ec9b9f8be7cfc8 id-95874ef3c8a54080a7aeb4ea9aec8e09" fontColor="#00FF00" archimateElement="id-ba7c12bf15cc4ebf949bc3c3081d5ce1">
         <bounds x="648" y="649" width="120" height="181"/>
         <sourceConnection xsi:type="archimate:Connection" id="id-d1c86112bbe445d8afe4e5bfdc629ba4" source="id-ba039d5524664fed82a991dbcc2c5402" target="id-c76dac15fd074859aab480931bd61f2b" archimateRelationship="id-3360c1e7a849468285f5b1f3d78a668c"/>
         <sourceConnection xsi:type="archimate:Connection" id="id-43f92a8a2c8b49e69278b26396c73c94" source="id-ba039d5524664fed82a991dbcc2c5402" target="id-e589f87c69bc48678731a61fdf215153" archimateRelationship="id-a7fc5aeb3a5a4a1f8653bf13128f04e4"/>
