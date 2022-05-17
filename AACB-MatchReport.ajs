@@ -6,6 +6,28 @@ load(__DIR__ + "lib/papaparse.js");
 
 console.log("> Loaded Papa Parse");
 
+function scan( component )
+{
+	// console.log('scan children of ' + component.name );
+	$(component).children().not("relationship").each(function(c) {
+		if( c.type == "application-component" )
+		{
+			if( $(c).prop('imdb match') === 'yes' )
+			{
+				$(c).attr("fontColor", "#F00000");
+			}				
+			else if( $(c).prop('imdb match') === 'translate' ) {
+				$(c).attr("fontColor", "#00F000");
+			}
+			scan(c);	
+		}
+		else if( c.type == 'grouping' )
+		{
+			scan(c);
+		}
+	});
+}
+
 console.log("> Import AACB_CMDB.CSV");
 var filePath = 'e:\\Archi\\AACB_CMDB.csv'; // '/home/zackpan/code/archi/AACB_CMDB.csv'; // window.promptOpenFile({ title: "Open CSV", filterExtensions: ["*.CSV"], fileName: "default.archimate" });
 if (filePath) {
@@ -113,11 +135,14 @@ if (filePath) {
 			});
 			console.setDefaultTextColor();
 		}
+		// recursive function scan
+		scan(v);
+		/*
         $(v).children().not("relationship").each(function(o) {
 
             if(o.type === 'application-component' ){
                  //$(o).prop('CIA', '211');
-
+				
 				if( $(o).prop('imdb match') === 'yes' )
 				{
 					$(o).attr("fontColor", "#FF0000");
@@ -149,9 +174,10 @@ if (filePath) {
 							$(g).attr("fontColor", "#00F000");
 						}						
 					});					
-				});                
+				});
             }
 			if(o.type === 'grouping') {
+			
 				if(o.name == 'Exchange/CCP connectivity & Message transfer EU' )
 					console.log('Exchange Group in view: ' + v.name + ' - ' + o.name );
 				$(o).children().filter("application-component").each(function(c) {
@@ -180,6 +206,7 @@ if (filePath) {
 				});
 			}
         });
+		*/
     });  
       
     console.log("> Parsing Complete");
