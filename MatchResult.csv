@@ -2,7 +2,7 @@ Name,Matched
 Documentation tool,No
 Legacy components,No
 "Saga -service XYZ ",No
-TRADE CAPTURE-US,Translate
+TRADE CAPTURE-US,Yes
 AP Intercompany,No
 BANCS,Yes
 Bancs channels,No
@@ -15,7 +15,7 @@ CII,Yes
 CLIENT FEE TOOL,Yes
 Clearing Parameters (CLP),Yes
 COH AP,No
-COH US,No
+Correlation Haircut Chicago (COH CHO),Yes
 Dash,No
 Cross margin,No
 DRAGON,Yes
@@ -23,7 +23,7 @@ Exact,No
 Extranet,No
 FCA Interest system,No
 Fix Brokers,No
-Fixed Gateway Server (FGS),No
+FGS,Yes
 Gatekeeper,Yes
 GMB,No
 GMI US,No
@@ -41,7 +41,7 @@ RBH,Translate
 RBM,Translate
 Len Boles TReg T (LDB),No
 Loanet,Yes
-Markit Serv / TradeSTP,No
+TradeSTP,Yes
 MCConnect,No
 MC Orders,Yes
 MC Trades,Yes
@@ -66,7 +66,7 @@ Salesforce,Yes
 SB&L module APAC,No
 SFCM,Yes
 Sentry,Yes
-SF Inventory Manager,No
+TS-DOS - Inventory manager & trading Analytics (python),Yes
 Shark IV,Yes
 SIVEX,Yes
 SMARTS.BROKER,Yes
@@ -75,11 +75,11 @@ Sun Accounting System (Tky),Yes
 Swift,No
 Tableau,No
 TASC,Yes
-"TCC ",No
+TCC,Yes
 TWOFOUR FX,Yes
 TWOFOUR CM,Yes
 UFG,Yes
-UFG (MEFF-MICS Gateway),No
+MEFF-MICS Gateway,Yes
 US Intercompany,No
 Connector,No
 Kafka cluster,No
@@ -224,7 +224,7 @@ Euroclear Connect,No
 "Euronext ",No
 Euronext connect1,No
 Euronext RISK GUARD,No
-Exchange Connector,No
+EXCHANGE CONNECTOR,Translate
 Finance dashboard,No
 FOREX GUI Deutsche Boerse,No
 Form signer,No
@@ -369,16 +369,15 @@ Mendix HK Warrant product generator,No
 MICS EuroCCP,No
 Deal Station,No
 OMGEO,No
-15c3-3 Allocation,Translate
+15c3-3 Allocation,Yes
 Securitease,No
 "SGX Enhanced PCS reporting ",No
 "SGX exposure reporting ",No
-ShortInterest,No
 "Treasury dashboard ",No
 TRR (Total Risk Requirements),No
 XL Connector,Yes
 IHS Markit IM calculation,No
-15c3-3 Segregation,Translate
+15c3-3 Segregation,Yes
 BNY Mellon Portal (US),Yes
 TradeEcho,No
 "APA Euronext ",No
@@ -390,7 +389,7 @@ US Account data master,No
 CLIENT FEE TOOL US,Yes
 CLP Database,No
 FIS Astec,No
-ION Margin US,No
+ION Margin Module US,Yes
 LFA (Loannet Finance Allocation),No
 Short Stock Rate Calculator,Yes
 IDSI,No
@@ -408,7 +407,7 @@ Pulse,Yes
 Talent2Grow,No
 TripSource,No
 LiquidMetrics,No
-IHS Markit SF portal,No
+IHS Markit SFTR Solution,Yes
 Integration Component,No
 I-Comply,No
 WorldCheck,No
@@ -484,3 +483,11 @@ BRaaS Fractions UI,No
 Clearing Portal,No
 Fraction Book Risk Service,No
 Refinitiv Elektron Realtime Price Service,No
+Tableau EU,Yes
+ION Margin Module EU,No
+ION MArgin Module APAC,No
+ION Margin Module US,Yes
+Correlation Haircut CE (COH CHA),Yes
+RTRM CE,Yes
+Mendix,No
+Exact CE Ams (Exact 125),Yes

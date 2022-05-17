@@ -75,9 +75,9 @@ if (filePath) {
         if(imdb_map.get(o.name) != null )
         {
             var object = imdb_map.get(o.name);
-            //if(o.name == 'ACG')
-            //     console.log(imdb_map.get('ACG'));
-            if(object["Archi_Name"] && object["Matched"] != 'Yes') // has translation 
+            //if(o.name == 'Spark')
+            //     console.log(imdb_map.get('Spark'));
+            if(object["Archi_Name"] && object["Matched"] != 'Yes' ) // has translation 
             {
                 object["Matched"] = 'Translate';
                 object["Archi_Name"] = o.name;
@@ -91,9 +91,10 @@ if (filePath) {
                 object["Matched"] = 'Yes';
                 object["Archi_Name"] = o.name;
                 $(o).prop('imdb match', 'yes');
-                //console.log('Match Found: '+o.name);
+                if(o.name == 'TCC' )
+					console.log('Match Found: '+o.name);
             }
-
+			
         }
         else
         {
@@ -103,18 +104,17 @@ if (filePath) {
     });
     
     $('archimate-diagram-model').each(function(v) {
-        if(v.name == 'A 3 Core clearing applications US')
+        if(v.name == 'A 2 Core clearing applications EU')
         {
 			console.setTextColor(255, 0, 0);
 			console.log('\n\n ' + v.type + ' -- ' + v.name + '\n\n');
 			$(v).children().each(function(o) {
-				console.log(o.name + ' - ' + o.type );
+			//	console.log(o.name + ' - ' + o.type );
 			});
 			console.setDefaultTextColor();
 		}
         $(v).children().not("relationship").each(function(o) {
-			if(o.name == 'ACG' )
-				console.log('ACG in view ' + v.name + ' - ' + o.type );
+
             if(o.type === 'application-component' ){
                  //$(o).prop('CIA', '211');
 
@@ -137,11 +137,26 @@ if (filePath) {
 					}				
 					else if( $(c).prop('imdb match') === 'translate' ) {
 						$(c).attr("fontColor", "#00F000");
-					}				
+					}	
+					$(c).children().filter("application-component").each(function(g) {
+						if( $(g).prop('imdb match') === 'yes' )
+						{
+							$(g).attr("fontColor", "#F00000");
+							//console.log( $(g).prop('Owner'));
+							//console.log(g.type + ' : ' + g.name); 
+						}				
+						else if( $(g).prop('imdb match') === 'translate' ) {
+							$(g).attr("fontColor", "#00F000");
+						}						
+					});					
 				});                
             }
 			if(o.type === 'grouping') {
+				if(o.name == 'Exchange/CCP connectivity & Message transfer EU' )
+					console.log('Exchange Group in view: ' + v.name + ' - ' + o.name );
 				$(o).children().filter("application-component").each(function(c) {
+					if(o.name == 'Exchange/CCP connectivity & Message transfer EU' )
+						console.log(c.name + ' - ' + c.type );
 					if( $(c).prop('imdb match') === 'yes' )
 					{
 						$(c).attr("fontColor", "#F00000");
@@ -150,7 +165,18 @@ if (filePath) {
 					}				
 					else if( $(c).prop('imdb match') === 'translate' ) {
 						$(c).attr("fontColor", "#00F000");
-					}				
+					}	
+					$(c).children().filter("application-component").each(function(g) {
+						if( $(g).prop('imdb match') === 'yes' )
+						{
+							$(g).attr("fontColor", "#F00000");
+							//console.log( $(g).prop('Owner'));
+							//console.log(g.type + ' : ' + g.name); 
+						}				
+						else if( $(g).prop('imdb match') === 'translate' ) {
+							$(g).attr("fontColor", "#00F000");
+						}						
+					});								
 				});
 			}
         });
